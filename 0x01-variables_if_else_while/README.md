@@ -1,1 +1,1 @@
-c c code
+variables if else while in c
