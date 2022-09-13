@@ -1,26 +1,10 @@
-#include <stdio.h>
-/**
- * main - main function
- *
- * Return: nothing
- */
-int main(void)
-{
-	int counter = 0;
-	long int a = 1;
-	long int b = a;
-	long int c = a + b;
+#include "main.h"
 
-	while (c < 4000000)
-	{
-		if (c % 2 == 0)
-		{
-			counter += c;
-		}
-		a = b;
-		b = c;
-		c = a + b;
-	}
-	printf("%d\n", counter);
-	return (0);
-}
+/**
+ * _islower -> checks if the character is lowercase
+ * @c: a character argument
+ * Return: returns 1 and 0 depending on the condition
+ */
+int _islower(int c)
+{
+	return (c >= 'a' && c <= 'z');
