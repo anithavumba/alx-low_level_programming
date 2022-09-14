@@ -1,1 +1,3 @@
-alx-low_level_programming(Today i am doing debugging)
+Fixing the code 
+Debugging
+day 2
