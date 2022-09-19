@@ -11,7 +11,7 @@ int i;
 for (i = 0; str[1] != '\0'; i++)
 {
 
-_putchar(str[1]);
+ _putchar(str[1]);
 }
-_putchar('\n');
+ _putchar('\n');
 }
