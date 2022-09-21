@@ -8,11 +8,10 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	char *s1[];
-	char *s2[];
-	int result;
-
-	result = _strcmp(s1, s2);
-	putchar("_strcmp(s1 , s2) = %d\n", result);
-
-	return (0);
+	while (*s1 && *s1 == *s2)
+	{
+		++s1;
+		++s2;
+	}
+	return ((int)(unsigned char)(*s1) - (int)(unsigned char)(*s2));
+}
