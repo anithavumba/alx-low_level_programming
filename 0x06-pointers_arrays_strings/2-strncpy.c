@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * _strncpy -function that copies a string to another string
- * @dest: arry src will be copied to
- * @src: the string to be copied
- * @n: number of character to be copied
- * Return: Return a pointer to dest
+ * _strncpy - function to copy string
+ *
+ * @dest: string to copy to
+ * @src: string to copy from
+ * @n: number of chars to copy
+ * Return: char pointer
  */
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -13,14 +14,13 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (i = 0; i < n; i++)
 	{
-	if (src[i] == '\0')
-	{
-	for (j = i; j < n && dest[j] != '\0'; j++)
-		dest[j] = '\0';
-	break;
-	}
-	dest[i] = src[i];
+		if (src[i] == '\0')
+		{
+			for (j = i; j < n && dest[j] != '\0'; j++)
+				dest[j] = '\0';
+			break;
+		}
+		dest[i] = src[i];
 	}
 	return (dest);
 }
-

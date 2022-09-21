@@ -1,30 +1,27 @@
 #include "main.h"
 
 /**
-* rot13 - encodes a string using rot13
-* @s: input string.
-* Return: the pointer to dest.
-*/
-char *rot13(char *s)
+ * rot13 - converts string to leet
+ *
+ * @c: character string pointer
+ * Return: char pointer
+ */
+char *rot13(char *c)
 {
-int count = 0, i;
+	int i, j;
+	char rot_13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm",
+	alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-
-while (*(s + count) != '\0')
-{
-for (i = 0; i < 52; i++)
-{
-if (*(s + count) == alphabet[i])
-{
-*(s + count) = rot13[i];
-break;
-}
-
-}
-count++;
-}
-return (s);
+	for (i = 0; c[i] != '\0'; i++)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (alphabet[j] == c[i])
+			{
+				c[i] = rot_13[j];
+				break;
+			}
+		}
+	}
+	return (c);
 }

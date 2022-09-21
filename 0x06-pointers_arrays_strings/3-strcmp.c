@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * _strcmp - function campares to strings s1 and s2
- * @s1: a string
- * @s2: a string
- * Return: Always 0
+ * _strcmp - function to copy string
+ *
+ * @s1: first string to compare
+ * @s2: second string to compare
+ * Return: int
  */
 int _strcmp(char *s1, char *s2)
 {
