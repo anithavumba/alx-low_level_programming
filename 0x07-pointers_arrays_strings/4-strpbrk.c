@@ -6,7 +6,7 @@
  * @accept:character in str1 that matches one of the characters in str2
  * Return: string s that matches any character specified in accept
  */
-char *_strstr(char *haystack, char *needle)
+char *_strpbrk(char *s, char *accept)
 {
 	int j;
 
