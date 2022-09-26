@@ -2,28 +2,30 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - the sum of the two diagonals of a square matrix of integers
- * @a: 2d array of chars
- * @size: number matrix
+ * print_diagsums - prints the sum of the two diagonals of
+ * a square matrix of integers
+ *
+ * @a: 2-dimensional array
+ * @size: size of the matrix
  * Return: void
  */
 void print_diagsums(int *a, int size)
 {
-	int i;
+	int i = 0, len, diag_sum = 0;
 
-	int sum1, sum2;
-
-	sum1 = 0;
-	sum2 = 0;
-
-	i = 0;
-	while (i < size)
+	len = size * size;
+	while (i < len)
 	{
-		sum1 = sum1 + *(a + i * size + i);
-		sum2 = sum2 + *(a + i * size + size - i - 1);
-		i++;
-
+		diag_sum += a[i];
+		i += size + 1;
 	}
-
-	printf("%i, %i\n", sum1, sum2);
+	printf("%d, ", diag_sum);
+	i = size - 1;
+	diag_sum = 0;
+	while (i < len - size + 1)
+	{
+		diag_sum += a[i];
+		i += size - 1;
+	}
+	printf("%d\n", diag_sum);
 }
