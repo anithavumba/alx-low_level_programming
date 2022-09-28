@@ -2,7 +2,6 @@
 
 /**
  * _sqrt_recursion - returns the natural square root of a number
- *
  * @n: number
  * Return: int
  */
@@ -19,7 +18,6 @@ int _sqrt_recursion(int n)
 
 /**
  * is_sqrt - function to check whether it's a natural square root or not
- *
  * @n: number
  * @square: test number
  * Return: int
