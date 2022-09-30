@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 /**
- * main - call other function
- * @argc: length of argv
- * @argv: number of arguments
- * Return: Always 0 upon success
+ * main - function
+ *@argc: length of argv
+ *@argv: number of argument
+ *Return: Always 0
  */
+
 int main(int argc, char *argv[])
 {
 /*Declaring variables*/
@@ -21,13 +22,18 @@ printf("Error\n");
 return (1);
 }
 
-total = atoi(argv[1]); /*coverting string to int*/
+total = atoi(argv[1]); /*Covert str to int*/
 
 if (total <= 0)
+{
 printf("0\n");
 return (0);
 }
+
+/*Declaring While*/
+
 while (coins[position] != '\0')
+
 {
 if (total >= coins[position])
 {
@@ -39,6 +45,7 @@ total -= coins[position] * aux;
 position++;
 
 }
+
 printf("%d\n", change);
 return (0);
 }
