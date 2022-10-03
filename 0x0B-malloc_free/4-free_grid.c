@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- *free_grid - a funtion to free matrix
- *@grid: matrix being passed
- *@height: freeing using height variable
- *Return: nothinng
+ * free_grid - freeing matrix
+ * @grid: matrix being passed
+ * @height: freeing using this variable
+ * Return: nothing
  */
 void free_grid(int **grid, int height)
 {
@@ -14,4 +14,5 @@ void free_grid(int **grid, int height)
 
 	for (a = 0; a < height; a++)
 	free(grid[a]);
-}	free(grid);
+	free(grid);
+}
